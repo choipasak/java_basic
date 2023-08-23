@@ -1,5 +1,7 @@
 package basic.begin;
 
+import java.util.Scanner;
+
 public class VariableExample {
 
 	public static void main(String[] args) {
@@ -14,6 +16,7 @@ public class VariableExample {
          3. 변수는 동일한 이름으로 중복 선언할 수 없습니다.
          4. 변수 내부의 값은 언제든지 변경이 가능합니다.
 		*/
+		
 		
 		//변수의 선언 : [자료형(데이터 타입)] [변수명];
 		int age;
@@ -58,7 +61,10 @@ public class VariableExample {
 		//int result = myScore + num; num이 누구냐는 뜻!
 		int result;
 		//System.out.println(result); result가 초기화가 안되서 출력x
-		
+		Scanner sc = new Scanner(System.in);
+		int num = sc.nextInt();
+		System.out.printf("구구단을 입력하세요: %d\n", num);
+		System.out.printf("*** 구구단 %d단 ***\n", num);
 	}
 
 }

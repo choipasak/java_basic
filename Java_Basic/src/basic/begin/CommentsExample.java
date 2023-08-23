@@ -14,10 +14,10 @@ public class CommentsExample {
 		 실행시킵니다.
 		 */
 		
-		//sop+ctrl+space : System.out.println();의 단축키
+		// sop+ctrl+space : System.out.println();의 단축키
 		System.out.println("안녕하쇼");
 		
-		//컴파일 단축키 : ctrl+F11
+		// 컴파일 단축키 : ctrl+F11
 		
 		System.out.println("반갑습니다~");
 		
