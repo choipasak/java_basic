@@ -79,8 +79,10 @@ public class ArrayBasic {
 		// 만약 배열의 크기를 늘리거나 줄이고 싶다면
 		// 기존의 배열을 조작하는 것이 아니라 새롭게 생성하셔야 합니다.
 		
-		
-		
+		int[] ant = {1, 11, 111, 1111, 11111};
+		for(int house : ant) {
+			System.out.println(house);
+		}
 		
 		
 

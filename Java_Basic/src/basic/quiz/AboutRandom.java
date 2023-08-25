@@ -1,5 +1,7 @@
 package basic.quiz;
 
+import java.util.Scanner;
+
 public class AboutRandom {
 
 	public static void main(String[] args) {
@@ -17,12 +19,13 @@ public class AboutRandom {
 		// 사용자로부터 문제의 답을 받을 수 있게 하기
 		Scanner sc = new Scanner(System.in);
 		System.out.println("~ 문제 풀이 ~");
+		int num1 = (int) (Math.random()*100+1);
+		int num2 = (int) (Math.random()*100+1);
+		int sym = (int) Math.random();
 		
 		
 		while(true) {
 			
-			int num1 = (int) ((Math.random()*100)+1);
-			int num2 = (int) ((Math.random()*100)+1);
 		}
 		
 		

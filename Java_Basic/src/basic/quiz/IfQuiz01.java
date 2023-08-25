@@ -25,8 +25,10 @@ public class IfQuiz01 {
 		
 		if(num1 > num2) {
 			System.out.println(num1 + "이 큰 수 입니다.");
-		}else {
+		}else if(num1 > num2){
 			System.out.println(num2 + "이 큰 수 입니다.");
+		}else {
+			System.out.println("같은 수 입니다.");
 		}
 		
 		sc1.close();

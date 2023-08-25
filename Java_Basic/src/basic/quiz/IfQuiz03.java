@@ -36,44 +36,36 @@ public class IfQuiz03 {
 		 4. 
 		 */
 		
-		if(num1 > num2 && num1 > num3) {
+		if(num1 > num2 && num1 > num3) { // num1이 max다!
+			max = num1;
 			if(num2 > num3) {
-				max = num1;
 				mid = num2;
 				min = num3;
-				System.out.printf("max : %d, mid : %d, min : %d", max, mid, min);
-			}else if(num3 > num2) {
-				max = num1;
+			}else {
 				mid = num3;
 				min = num2;
-				System.out.printf("max : %d, mid : %d, min : %d", max, mid, min);
 			}
-		}else if(num2 > num1 && num2 > num3) {
+		}else if(num2 > num1 && num2 > num3) { // num2가 max!
+			max = num2;
 			if(num1 > num3) {
-				max = num2;
 				mid = num1;
 				min = num3;
-				System.out.printf("max : %d, mid : %d, min : %d", max, mid, min);
-			}else if(num3 > num1){
-				max = num2;
+			}else {
 				mid = num3;
 				min = num1;
-				System.out.printf("max : %d, mid : %d, min : %d", max, mid, min);
 			}
-		}else if(num3 > num2 && num3 > num1) {
+		}else { // num3가 max!
+			max = num3;
 			if(num2 > num1) {
-				max = num3;
 				mid = num2;
 				min = num1;
-				System.out.printf("max : %d, mid : %d, min : %d", max, mid, min);
-			}else if(num1 > num2){
-				max = num3;
+			}else {
 				mid = num1;
 				min = num2;
-				System.out.printf("max : %d, mid : %d, min : %d", max, mid, min);
 			}
 		}
 		
+		System.out.printf("max : %d, mid : %d, min : %d", max, mid, min);
 		
 		sc1.close();
 	}
