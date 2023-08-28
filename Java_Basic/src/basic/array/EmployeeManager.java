@@ -88,7 +88,7 @@ public class EmployeeManager {
 				if(count == 0) {
 					System.out.println("등록된 사원 정보가 없습니다.");
 					break;
-				}else { // 사원의 정보를 담은 배열을 새로 만들어서 출력해도 될거같은데 / 아니다 그럼 각각의 정보들이 안나오니까 물어볼까
+				}else { 
 					// QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
 					System.out.println("사번> ");
 					for(String un : userNums) {
