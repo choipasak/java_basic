@@ -86,15 +86,13 @@ public class EmployeeManager {
 				System.out.println("사번을 입력하세요 : ");
 				String userNum = sc.next();
 				
-				System.out.print("이름을 입력해 주세요: ");
-				String name = sc.next();
-				
-				System.out.print("나이를 입력해 주세요: ");
-				int age = sc.nextInt();
-				
-				System.out.print("부서명을 입력해 주세요: ");
-				String department = sc.next();
-				
+				for(int i=0; i<count; i++) {
+					if(!userNum.equals(userNums[i])) {
+						System.out.println("조회하신 사원의 정보가 없습니다.");
+					}else {
+						System.out.println("");
+					}
+				}
 				
 
 			}else if(menu == 4) {
@@ -103,6 +101,8 @@ public class EmployeeManager {
 				//사번 입력 -> 존재하는 사번이 맞다면 -> [1. 나이변경 | 2. 부서변경 | 3.취소]
 				//사번이 존재하지 않는다면 없다고 얘기해 주세요.
 				//받은 값이랑 기존거와 교체를 해주면댐. 여기서 새로운 값을 받?
+				
+				
 
 
 			}else if(menu == 5) {
