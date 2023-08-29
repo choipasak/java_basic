@@ -26,10 +26,9 @@ public class Array2DQuiz {
 		int avg = 0;
 		for(int[] num : score) {
 			for(int n : num) {
-				
+				sum += n;
 			}
 		}
-
 	}
 
 }
