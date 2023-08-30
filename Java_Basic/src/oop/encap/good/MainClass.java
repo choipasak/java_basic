@@ -12,6 +12,10 @@ public class MainClass {
 		System.out.printf("내 생일은 %d년 %d월 %d일 입니다.\n"
 				, m.getYear(),  m.getMonth(), m.getDay());
 		
+		m.birthInfo(2555, 12, 10);
+		m.birthInfo(2000, 8, 30);
+		
+		m.isValidateMonth(9, 31);
 	}
 
 	

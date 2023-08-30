@@ -1,5 +1,7 @@
 package oop.encap.good;
 
+import java.lang.invoke.MethodHandles.Lookup.ClassOption;
+
 public class MyBirth {
 
 	/*
@@ -87,13 +89,48 @@ public class MyBirth {
 	
 	// getter / setter 자동완성있음 zz
 	
-	public void birthInfo()	{
+	public void birthInfo(int year, int month, int day)	{
 		//year, month, day 셋 중 단하나라도 제대로 값이 셋팅되지 않았다면
 		// 출력을 해 주지 않겠다.
+		/*
+		if(setYear(this.year) || this.month == 0 || this.day == 0) {
+			return;
+		}else {
+			System.out.printf("내 생일은 %d년 %d월 %d일 입니다."
+					, this.year, this.month, this.day);
+		}
+		*/
+		if(year < 1900 || year > 2023) {
+			System.out.println("잘못된 연도 입력입니다.");
+		}else {
+			this.year = year;
+		}
 	}
 	
-	public void isValidateMonth() {//더 완성된 코드를 위해서
+	public void isValidateMonth(int month, int day) {//더 완성된 코드를 위해서
 		//각 월에 적합한 일자가 세팅이 되어 있는지를 판별하는 메서드
+		switch(this.month) {
+		case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+			if (this.day > 31 || this.day < 1) {
+				System.out.println("잘못된 입력입니다.");
+			}else {
+				this.day = day;
+				System.out.println("적합한 숫자입니다!");
+			}
+			break;
+			
+		case 2: case 4: case 6: case 9: case 11:
+			if (this.day > 30 || this.day < 1) {
+				System.out.println("잘못된 입력입니다.");
+			}else {
+				this.day = day;
+				System.out.println("적합한 숫자입니다!");
+			}
+			break;
+			
+		default:
+			System.out.println("잘못된 월을 입력하였습니다.");
+		}
 	}
 	
 	/*
