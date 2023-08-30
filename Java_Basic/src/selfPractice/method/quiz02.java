@@ -83,14 +83,18 @@ public class quiz02 {
 		printFood();
 
 		//파스타의 인덱스 알아내기
-		indexOf("파스타");
+		System.out.println(indexOf("파스타"));
+		
 
 		//김치찌개의 인덱스 알아내기
+		System.out.println(indexOf("부대찌개"));
+		
 
 		//짜장면의 인덱스 알아내기(존재하지 않는 값)
-
+		System.out.println(indexOf("짜장면"));
+		
 		//김치찌개, 망고 지우기 (망고는 존재하지 않는 값)
-
+		
 		//라면의 존재 여부 출력
 
 		//양념치킨의 존재 여부 출력
