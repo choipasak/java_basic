@@ -32,8 +32,8 @@ public class MainClass {
 		 */
 
 		Player[] p = {w1,w2,m2,h1,h2};
-			m1.blizzard(p);
-
+		m1.blizzard(p);
+		
 	}
 
 }
