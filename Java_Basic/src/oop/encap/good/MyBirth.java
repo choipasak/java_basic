@@ -1,7 +1,5 @@
 package oop.encap.good;
 
-import java.lang.invoke.MethodHandles.Lookup.ClassOption;
-
 public class MyBirth {
 
 	/*
@@ -79,6 +77,14 @@ public class MyBirth {
 		if(day > 31 || day < 1) {
 			System.out.println("잘못된 입력입니다.");
 		}else {
+			if(this.month == 0) {
+				System.out.println("일자를 입력하기 위해서는 월 입력이 선행되어야 합니다.");
+				return;
+			}
+			if(!isValidateMonth(day)) {
+				System.out.println("월에 따른 일자가 올바르지 않습니다.");
+				return;
+			}
 			this.day = day;
 		}
 	}
@@ -92,36 +98,44 @@ public class MyBirth {
 	public void birthInfo(int year, int month, int day)	{
 		//year, month, day 셋 중 단하나라도 제대로 값이 셋팅되지 않았다면
 		// 출력을 해 주지 않겠다.
-		/*
-		if(setYear(this.year) || this.month == 0 || this.day == 0) {
+		
+		if(this.year == 0 || this.month == 0 || this.day == 0) {
+			System.out.println("날짜 필드 중에 초기화 되지 않은 데이터가 있습니다.");
 			return;
-		}else {
-			System.out.printf("내 생일은 %d년 %d월 %d일 입니다."
+		}
+
+		System.out.printf("내 생일은 %d년 %d월 %d일 입니다.\n"
 					, this.year, this.month, this.day);
-		}
-		*/
-		if(year < 1900 || year > 2023) {
-			System.out.println("잘못된 연도 입력입니다.");
-		}else {
-			this.year = year;
-		}
 	}
 	
-	public void isValidateMonth(int month, int day) {//더 완성된 코드를 위해서
+	private boolean isValidateMonth(int day) {//더 완성된 코드를 위해서
 		//각 월에 적합한 일자가 세팅이 되어 있는지를 판별하는 메서드
 		switch(this.month) {
+		case 2://얘는 28일임ㅜㅜ
+			if(day > 28) {
+				return false;
+			}
+		case 4: case 6: case 9: case 11:
+			if(day > 30) {
+				return false;
+			}
+		default:
+			return true;
+			
+		/*	
 		case 1: case 3: case 5: case 7: case 8: case 10: case 12:
 			if (this.day > 31 || this.day < 1) {
-				System.out.println("잘못된 입력입니다.");
+				System.out.println("해당 월에 없는 일을 입력했습니다.");
 			}else {
 				this.day = day;
 				System.out.println("적합한 숫자입니다!");
 			}
 			break;
 			
-		case 2: case 4: case 6: case 9: case 11:
+		case 4: case 6: case 9: case 11:
 			if (this.day > 30 || this.day < 1) {
-				System.out.println("잘못된 입력입니다.");
+				System.out.println("해당 월에 없는 일을 입력했습니다.");
+				return false;
 			}else {
 				this.day = day;
 				System.out.println("적합한 숫자입니다!");
@@ -130,6 +144,7 @@ public class MyBirth {
 			
 		default:
 			System.out.println("잘못된 월을 입력하였습니다.");
+		*/
 		}
 	}
 	
