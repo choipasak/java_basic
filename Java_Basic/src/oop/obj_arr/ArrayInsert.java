@@ -39,11 +39,11 @@ public class ArrayInsert {
 			System.out.println("성별을 입력해주세요");
 			String gender = sc.next();
 
-			//			Person p = new Person(name, age, gender);
-			//			people[i] = p;
 			people[i].setName(name);
 			people[i].setAge(age);
 			people[i].setGender(gender);
+			//			Person p = new Person(name, age, gender);
+			//			people[i] = p;
 
 //			people[i] = new Person(name, age, gender); //이렇게 줄이기가능
 

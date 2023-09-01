@@ -48,8 +48,12 @@ public class MainClass {
 		
 		System.out.println("=======================");
 		
-		Car c = kim.buyCar("소나타"); // 달린다는 말 출력을위해 객체생성
+		Car c = kim.buyCar("테슬라"); // 달린다는 말 출력을위해 객체생성
 		c.run();//달린다 메서드
+		Tesla myt = (Tesla) c;
+		myt.activeAutopilot();
+		//아니면 다른 방법으로 리턴 받을 때부터 Tesla타입으로 받으면 된다!
+		//Tesla c = (Tesla)kim.buyCar("테슬라"); 이렇게 바꿔주면 된다!
 		
 	}
 
