@@ -23,9 +23,9 @@ public class ScoreMain {
 		          모두 null로 가득 차 있습니다. (null.scoreInfo() -> 에러)
 		 */
 		
+		Score[] scores = new Score[100];
 		Scanner sc = new Scanner(System.in);
 		Score call = new Score();
-		Score[] scores = new Score[100];
 		
 		for(int i=0; i<scores.length; i++) {
 
@@ -34,6 +34,7 @@ public class ScoreMain {
 			System.out.print("이름을 입력해주세요> \n");
 			String name = sc.next();
 			if(name.equals("그만")) {
+				System.out.println("프로그램을 종료합니다.");
 				break;
 			}
 			System.out.println("국어 점수를 입력하세요> \n");
@@ -48,12 +49,17 @@ public class ScoreMain {
 			
 			scores[i] = new Score(name, lang, eng, math);
 			
-		}
+		}//입력 반복문 끝!
+		
+		
 		
 		for(Score s : scores) {
 			if(s == null)break;
-			s.scoreInfo(scores);//객체호출
+			s.scoreInfo();//객체호출
+			System.out.println("================================");
 		}
+		
+		sc.close();
 		
 	}
 

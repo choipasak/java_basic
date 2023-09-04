@@ -23,6 +23,10 @@ public abstract class Shape {
 	
 	public abstract double getArea();
 	
+	public void setName(String name) {
+		this.name = name;
+	}
+
 	public void getName() {
 		System.out.println(this.name);
 	}

@@ -10,7 +10,7 @@ public class Score {
 	      scoreInfo() 메서드를 선언해 주세요.
 	      메서드 내부에는 출력문을 이용해서 모든 정보를 출력해 주세요.
 
-	     - 캡슐화를 구현해서 작성해 주세요. (생성자는 맘대로 하세요.)
+	     - 캡슐화를 구현해서 작성해 주세요. (생성자는 맘대로 하세요.) = 은닉 구현하라는 소리
 	 */
 
 	private String name;
@@ -20,7 +20,7 @@ public class Score {
 	private int total;
 	private double avg;
 	private int[] sub = {lang, math, eng};
-	
+
 	public String getName() {
 		return name;
 	}
@@ -78,23 +78,23 @@ public class Score {
 	}
 
 	public Score() {}
-	
+
 	public Score(String name, int lang, int eng, int math) {
-		
+		super(); // 이거 왜
 		this.name = name;
 		this.lang = lang;
 		this.eng = eng;
 		this.math = math;
-		
-		total = this.lang + this.eng + this.math;
-		avg = (double)total / sub.length;
+
+		this.total = this.lang + this.eng + this.math;
+		this.avg = (double)total / sub.length;
 	}
 
-	void scoreInfo(Score[] scores)	{
+	void scoreInfo() {//여기에 매개변수QQQQQQQQQQQQQQQQQQQQQQQQQQQQ
 		System.out.println("        국   영   수 총합점 평균");
 		System.out.printf("이름: %s %d  %d  %d  %d  %.1f\n"
 				,this.name, this.lang, this.eng, this.math, total, avg);
-		
+
 	}
-	
+
 }

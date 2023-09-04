@@ -17,15 +17,15 @@ public class MainClass {
 		 - MainClass에서 길이가 5인 정사각형,
 		 반지름이 4인 원의 모든 내용을 호출해 보세요.
 		 */
-		Shape s = new Circle("원", 4);
-		System.out.printf("넓이: %.2f\n", s.getArea());
-		s.getName();
+		Shape c = new Circle("원", 4);
+		c.getName();
+		System.out.printf("넓이: %.2f\n", c.getArea());
 
-		System.out.println("============================");
+		System.out.println("=============");
 		
-		Shape s1 = new Rect("정사각형", 5);
-		System.out.println("넓이: " + s1.getArea());
-		s1.getName();
+		Shape r = new Rect("정사각형", 5);
+		r.getName();
+		System.out.println("넓이: " + r.getArea());
 
 
 
