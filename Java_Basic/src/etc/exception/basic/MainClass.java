@@ -31,11 +31,13 @@ public class MainClass {
 				int b = sc.nextInt();
 
 				System.out.println("총 합은! " + (a+b));
-				break;
 				//}catch(ArithmeticException | InputMismatchException e) {
+				break;//여기에다가 break;를 걸어주는 이유는 예외가 나면 건너뛰고 catch로 바로 가기 때문이다!
 			}catch(Exception e){
 				System.out.println("정수로만 입력하세요");
 				sc.nextLine();
+				//여기 continue; 를 안해주는 이유도 밑에 break;가 없기 때문에
+				//다시 while(true)로 돌아감.
 			}
 		}
 
