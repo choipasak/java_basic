@@ -38,6 +38,7 @@ public class ArraysExample {
 		arr[2] = 'F';
 		System.out.println(Arrays.equals(arr, arr2));
 		
+		
 	}
 
 }
