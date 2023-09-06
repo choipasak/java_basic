@@ -1,11 +1,6 @@
 package etc.api.collection.set;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.HashSet;
-import java.util.Iterator;
-import java.util.List;
 import java.util.Random;
 import java.util.Set;
 
@@ -95,6 +90,8 @@ public class LottoSimulator {
 
 
 	public static void main(String[] args) {
+		
+		long start = System.currentTimeMillis();
 
 		//로또 번호 생성 메서드를 호출해서 당첨 번호를 하나 고정시키세요.
 		Set<Integer> settingNumber = createLotto();
@@ -128,6 +125,8 @@ public class LottoSimulator {
 			}
 
 		}
+		long end = System.currentTimeMillis();
+		System.out.println("걸린 시간: " + (end-start) + "s");
 
 	}
 
