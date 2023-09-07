@@ -27,35 +27,38 @@ public class ParseQuiz {
 				System.out.print("입력값: ");
 				String nums = sc.nextLine();
 				nums.replace("-", "");
+				//Q. replace의 기능 : 보여주기형식
 				char checknum = nums.charAt(6);
 				if(nums.trim().length() != 14) {
 					System.out.println("잘못 입력하셨습니다.");
 					System.out.println("다시 입력해주세요.");
 					continue;
 				}else {
-					//int fnum = Integer.parseInt(nums);
-//				if()
-//				System.out.println(a);
-					int numbers = Integer.parseInt(nums);
-					System.out.println(numbers);
+					int fnum = Integer.valueOf(nums.replace("-", "")).intValue();
+					System.out.println(fnum);
+					
+					//				if()
+					//				System.out.println(a);
+
 					if(nums.charAt(6) != 1 || nums.charAt(6) != 2 || nums.charAt(6) != 3 || nums.charAt(6) != 4) {
 						System.out.println("다시 입력하십시오.");
 						continue;
 					}else {
 						switch(checknum) {
 						case 1:
-							System.out.printf("19%d%d년 %d월 %d일 %d세 남자",nums.charAt(0), nums.charAt(1), nums.charAt(2)+""+nums.charAt(3));
+							System.out.printf("19%d%d년 %d월 %d일 %d세 남자"
+									,nums.charAt(0), nums.charAt(1), nums.charAt(2)+""+nums.charAt(3));
 							break;
 						}
-						
+
 					}
 				}
 			}//while 끝
-			
+
 		}catch (NumberFormatException e) {
-			
+
 		}catch (Exception e) {
-			
+
 		}finally {
 			sc.close();
 		}
