@@ -14,7 +14,7 @@ public class BufferedReaderEx {
 		
 		try {
 			fr = new FileReader("C:/MyWork/hello.txt");
-			br = new BufferedReader(fr);
+			br = new BufferedReader(fr); 
 			/*
 			System.out.println(br.readLine()); // 한 줄씩 읽어옴.
 			System.out.println(br.readLine()); // 한 줄씩 읽어옴.

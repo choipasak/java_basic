@@ -21,32 +21,44 @@ public class ParseQuiz {
 		 */
 
 		Scanner sc = new Scanner(System.in);
-		System.out.println("주민등록번호를 입력해주세요! (- 포함)");
-		while(true) {
-			System.out.print("입력값: ");
-			String nums = sc.nextLine();
-			nums.replace("-", "");
-			int a = Integer.parseInt(nums);
-			int checknum = nums.charAt(6);
-			if(nums.trim().replace(" ", "").length() != 13) {
-				System.out.println("잘못 입력하셨습니다.");
-				break;
-			}else {
-				//int fnum = Integer.parseInt(nums);
-				
-				System.out.println(a);
-				if(nums.charAt(6) != 1 || nums.charAt(6) != 2 || nums.charAt(6) != 3 || nums.charAt(6) != 4) {
-					System.out.println("다시 입력하십시오.");
-					break;
+		System.out.println("주민등록번호를 입력해주세요! (-포함)");
+		try {
+			while(true) {
+				System.out.print("입력값: ");
+				String nums = sc.nextLine();
+				nums.replace("-", "");
+				char checknum = nums.charAt(6);
+				if(nums.trim().length() != 14) {
+					System.out.println("잘못 입력하셨습니다.");
+					System.out.println("다시 입력해주세요.");
+					continue;
 				}else {
-					switch(checknum) {
-					case 1:
-						System.out.printf("19%d%d년 %d월 %d일 %d세 남자",nums.charAt(0), nums.charAt(1), nums.charAt(2)+""+nums.charAt(3));
+					//int fnum = Integer.parseInt(nums);
+//				if()
+//				System.out.println(a);
+					int numbers = Integer.parseInt(nums);
+					System.out.println(numbers);
+					if(nums.charAt(6) != 1 || nums.charAt(6) != 2 || nums.charAt(6) != 3 || nums.charAt(6) != 4) {
+						System.out.println("다시 입력하십시오.");
+						continue;
+					}else {
+						switch(checknum) {
+						case 1:
+							System.out.printf("19%d%d년 %d월 %d일 %d세 남자",nums.charAt(0), nums.charAt(1), nums.charAt(2)+""+nums.charAt(3));
+							break;
+						}
+						
 					}
-
 				}
-			}
+			}//while 끝
+			
+		}catch (NumberFormatException e) {
+			
+		}catch (Exception e) {
+			
+		}finally {
+			sc.close();
 		}
 
-	}//while 끝
+	}
 }
