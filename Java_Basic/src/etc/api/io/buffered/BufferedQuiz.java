@@ -1,5 +1,10 @@
 package etc.api.io.buffered;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.time.LocalDate;
+import java.util.Scanner;
+
 public class BufferedQuiz {
 
 	public static void main(String[] args) {
@@ -16,7 +21,34 @@ public class BufferedQuiz {
 		         4. '그만'으로 파일이 작성되었다면, 아무 방법으로나 
 		          파일을 읽어서 콘솔에 출력해 보세요.
 		         */
+		
+		
+		LocalDate folderName = LocalDate.now();
+		File f = new File("C:/MyWork/" + folderName + "file");
+		
+		Scanner sc = new Scanner(System.in);
+		String fileName = sc.next();
+		
+		FileInputStream fis = null;
+		
+		fis = new FileInputStream("");
+		while(true) {
+			
+		}
+		
 
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
