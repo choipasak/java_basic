@@ -1,7 +1,14 @@
 package etc.api.io.buffered;
 
+import java.io.BufferedInputStream;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.time.LocalDate;
 import java.util.Scanner;
 
@@ -23,17 +30,69 @@ public class BufferedQuiz {
 		         */
 		
 		
-		LocalDate folderName = LocalDate.now();
-		File f = new File("C:/MyWork/" + folderName + "file");
+		LocalDate folderName = LocalDate.now();//LocalDateFomatter어쩌고 사용
 		
+		folderName.format()
+		System.out.println("파일명을 입력해 주세요");
+		System.out.print("> ");
 		Scanner sc = new Scanner(System.in);
+		File f = new File("C:/MyWork/" + folderName + "file/" + sc + ".txt");
+		
 		String fileName = sc.next();
+		String infile = sc.next();
 		
-		FileInputStream fis = null;
+		FileWriter fw = null;
+		BufferedWriter bw = null;
 		
-		fis = new FileInputStream("");
-		while(true) {
+		try {
+			fw = new FileWriter(f);
+			bw = new BufferedWriter(fw);
 			
+			byte[] arr = new String(infile).getBytes();
+			
+			System.out.println("'그만'을 입력하면 프로그램을 종료합니다.");
+			
+			for(byte b : arr) {
+				while(true) {
+					System.out.println("파일에 적을 내용을 입력해주세요");
+					System.out.print("> ");
+					bw.write(b);
+					if(infile.equals("그만")) break;
+				}
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			try {
+				bw.close();
+				fw.close();
+				sc.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}//쓰기 끝
+		
+		FileReader fr = null;
+		BufferedReader br = null;
+		
+		try {
+			fr = new FileReader(f);
+			br = new BufferedReader(fr);
+			
+			String str;
+			while((str = br.readLine()) != null) {
+				System.out.println(str);
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			try {
+				br.close();
+				fr.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
 		}
 		
 
