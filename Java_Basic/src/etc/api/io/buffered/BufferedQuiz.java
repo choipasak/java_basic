@@ -32,7 +32,7 @@ public class BufferedQuiz {
 		
 		LocalDate folderName = LocalDate.now();//LocalDateFomatter어쩌고 사용
 		
-		folderName.format()
+//		folderName.format();
 		System.out.println("파일명을 입력해 주세요");
 		System.out.print("> ");
 		Scanner sc = new Scanner(System.in);
